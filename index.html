@@ -3,51 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
+  <title>Nandha Kumar T | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Gallery styles */
+    #achievements .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    #achievements .gallery-item {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    #achievements .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    /* Modal styles */
+    #modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    #modal img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #000;
+    }
+    #modal.close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav>
-      <h1>Your Name</h1>
+      <h1>Nandha Kumar T</h1>
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Hello, I'm Your Name</h2>
-    <p>Web Developer | Designer | Student</p>
+    <h2>Hello, I'm Nandha Kumar T</h2>
+    <p>Aspiring Finance Professional | MBA Candidate | Data-Driven Decision Maker</p>
   </section>
 
   <section id="about" class="section">
     <h2>About Me</h2>
-    <p>Write a short intro about your skills, interests, and academic background.</p>
+    <p>
+      I'm an aspiring finance professional with expertise in financial analysis, security analysis, portfolio management, and data-driven decision-making. Currently pursuing my MBA at Thiagarajar School of Management, I am passionate about leveraging analytical tools to drive strategic financial decisions.
+    </p>
+  </section>
+
+  <!-- New Achievements Section -->
+  <section id="achievements" class="section">
+    <h2>Achievements</h2>
+    <div class="gallery-container">
+      <img src="assets/achievement1.jpg" alt="Achievement 1" class="gallery-item" />
+      <img src="assets/achievement2.jpg" alt="Achievement 2" class="gallery-item" />
+      <img src="assets/achievement3.jpg" alt="Achievement 3" class="gallery-item" />
+      <!-- Add more images as needed -->
+    </div>
   </section>
 
   <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="project">
-      <h3>Project Title</h3>
-      <p>Short description of the project. Tools used: HTML, CSS, JavaScript.</p>
+      <h3>Financial Portfolio Analysis</h3>
+      <p>Developed a comprehensive analysis of investment portfolios using modern portfolio theory to optimize returns and manage risk.</p>
       <a href="#">View Project</a>
     </div>
-    <!-- Add more project blocks -->
+    <div class="project">
+      <h3>Security Analysis Report</h3>
+      <p>Conducted in-depth security analysis on selected equities, evaluating financial statements and market trends to provide investment recommendations.</p>
+      <a href="#">View Project</a>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Financial Analysis</li>
+      <li>Portfolio Management</li>
+      <li>Data Analysis</li>
+      <li>Decision Making</li>
+      <li>Security Valuation</li>
+      <li>Microsoft Excel & Power BI</li>
+    </ul>
+  </section>
+
+  <section id="resume" class="section">
+    <h2>Resume</h2>
+    <p>You can download my latest resume here:</p>
+    <a href="assets/NandhaKumar_Resume.pdf" download>Download Resume (PDF)</a>
+  </section>
+
+  <section id="certifications" class="section">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Financial Markets – Yale University (Coursera)</li>
+      <li>Introduction to Data Analytics – IBM (Coursera)</li>
+      <li>Stock Market Investing – NSE Academy</li>
+    </ul>
+  </section>
+
+  <section id="testimonials" class="section">
+    <h2>Testimonials</h2>
+    <div class="testimonial">
+      <p>"Nandha Kumar shows great analytical thinking and finance domain knowledge. He is a quick learner and brings insightful perspectives to every discussion."</p>
+      <p><strong>– Dr. Ramesh Babu, Professor of Finance, TSM</strong></p>
+    </div>
+    <div class="testimonial">
+      <p>"It was a pleasure working with Nandha during our internship. His clarity in financial modeling and enthusiasm were truly admirable."</p>
+      <p><strong>– Priya Rajan, Co-Intern at Equitas Bank</strong></p>
+    </div>
+  </section>
+
+  <section id="blog" class="section">
+    <h2>Blog</h2>
+    <div class="blog-post">
+      <h3><a href="#">How to Build a Balanced Investment Portfolio</a></h3>
+      <p>A beginner-friendly guide on managing risk and returns through proper diversification strategies.</p>
+    </div>
+    <div class="blog-post">
+      <h3><a href="#">Top 5 Tools for Financial Analysis</a></h3>
+      <p>Explore essential tools like Excel, Power BI, and more to level up your financial data analysis game.</p>
+    </div>
   </section>
 
   <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>Email: yourname@email.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">yourprofile</a></p>
+    <p>Email: nandhakumar@example.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/nandha-kumar-t-825807213" target="_blank">nandha-kumar-t-825807213</a></p>
   </section>
-<link rel="stylesheet" href="style.css" />
 
   <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <p>&copy; 2025 Nandha Kumar T. All rights reserved.</p>
   </footer>
+
+  <!-- Modal for image popup -->
+  <div id="modal" onclick="closeModal()">
+    <img id="modal-img" src="" alt="Expanded image" />
+  </div>
+
+  <script>
+    // Open modal on image click
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const galleryItems = document.querySelectorAll('#achievements .gallery-item');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = item.src;
+        modalImg.alt = item.alt;
+      });
+    });
+
+    // Close modal when clicking outside image
+    function closeModal() {
+      modal.style.display = 'none';
+      modalImg.src = '';
+      modalImg.alt = '';
+    }
+  </script>
 </body>
 </html>

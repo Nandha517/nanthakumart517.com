@@ -5,12 +5,13 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #f8f9fa;
   color: #333;
+  line-height: 1.4; /* reduced from default */
 }
 
 header {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 12px 20px; /* reduced padding */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -25,15 +26,16 @@ nav {
 }
 
 nav h1 {
-  font-size: 24px;
+  font-size: 22px; /* slightly reduced */
   font-weight: 600;
   color: #0077cc;
+  margin: 0;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 16px; /* reduced gap */
   margin: 0;
   padding: 0;
 }
@@ -43,6 +45,7 @@ nav ul li a {
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
+  padding: 4px 0; /* slight spacing for touch */
 }
 
 nav ul li a:hover {
@@ -51,44 +54,51 @@ nav ul li a:hover {
 
 .hero {
   text-align: center;
-  padding: 100px 20px 60px;
+  padding: 60px 20px 40px; /* reduced top & bottom padding */
   background: linear-gradient(to right, #0077cc, #00b8d4);
   color: white;
 }
 
 .hero h2 {
-  font-size: 40px;
-  margin-bottom: 10px;
+  font-size: 34px; /* slightly reduced */
+  margin-bottom: 8px;
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
+  margin: 0;
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 30px 20px; /* reduced section padding */
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .section h2 {
-  font-size: 28px;
+  font-size: 24px;
   color: #0077cc;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+}
+
+.section p,
+.section li {
+  margin: 6px 0; /* tighter paragraph and list spacing */
 }
 
 .project {
   background-color: #ffffff;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 16px;
+  margin-bottom: 16px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .project h3 {
   margin-top: 0;
-  font-size: 22px;
+  font-size: 20px;
+  margin-bottom: 6px;
 }
 
 .project a {
@@ -101,11 +111,39 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Achievements Section */
+#achievements {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.achievement-item {
+  width: 150px;
+  text-align: center;
+  font-weight: 500;
+  color: #0077cc;
+}
+
+.achievement-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin-bottom: 8px;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 12px 20px; /* reduced padding */
   background-color: #ffffff;
   border-top: 1px solid #e0e0e0;
-  font-size: 14px;
+  font-size: 13px;
   color: #777;
 }
