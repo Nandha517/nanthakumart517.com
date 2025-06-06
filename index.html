@@ -1,202 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nandha Kumar T | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nandha Kumar T | MBA Portfolio</title>
+<link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* Gallery styles */
-    #achievements .gallery-container {
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+    }
+    header, section, footer {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #00d9ff;
+    }
+    a {
+      color: #00d9ff;
+      text-decoration: none;
+    }
+    nav {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 20px;
+      gap: 1rem;
+      padding: 1rem;
+      background: rgba(0,0,0,0.3);
     }
-    #achievements .gallery-item {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.3s ease;
+    nav a {
+      font-weight: 600;
     }
-    #achievements .gallery-item:hover {
-      transform: scale(1.05);
+    .highlight {
+      background: rgba(0, 217, 255, 0.1);
+      padding: 1rem;
+      border-left: 4px solid #00d9ff;
+      margin-bottom: 1.5rem;
     }
-    /* Modal styles */
-    #modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
+    .project, .skill, .testimonial, .certification, .article {
+      margin-bottom: 1.5rem;
     }
-    #modal img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #000;
+    .section-title {
+      border-bottom: 2px solid #00d9ff;
+      margin-bottom: 1rem;
     }
-    #modal.close-btn {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 40px;
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      padding-bottom: 4rem;
+    }
+    .gallery img {
+      width: 100px;
+      height: auto;
+      margin: 0.5rem;
+      border: 2px solid #00d9ff;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 1rem;
+      background: #00d9ff;
+      color: #000;
       font-weight: bold;
-      color: white;
-      cursor: pointer;
-      user-select: none;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Nandha Kumar T</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Hello, I'm Nandha Kumar T</h2>
-    <p>Aspiring Finance Professional | MBA Candidate | Data-Driven Decision Maker</p>
-  </section>
+<header>
+  <h1>Hi, I'm Nandha Kumar T</h1>
+  <p>MBA Candidate | Finance & Analytics Enthusiast | Cross-Domain Learner</p>
+</header>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I'm an aspiring finance professional with expertise in financial analysis, security analysis, portfolio management, and data-driven decision-making. Currently pursuing my MBA at Thiagarajar School of Management, I am passionate about leveraging analytical tools to drive strategic financial decisions.
-    </p>
-  </section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#articles">Blog</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <!-- New Achievements Section -->
-  <section id="achievements" class="section">
-    <h2>Achievements</h2>
-    <div class="gallery-container">
-      <img src="assets/achievement1.jpg" alt="Achievement 1" class="gallery-item" />
-      <img src="assets/achievement2.jpg" alt="Achievement 2" class="gallery-item" />
-      <img src="assets/achievement3.jpg" alt="Achievement 3" class="gallery-item" />
-      <!-- Add more images as needed -->
-    </div>
-  </section>
-
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Financial Portfolio Analysis</h3>
-      <p>Developed a comprehensive analysis of investment portfolios using modern portfolio theory to optimize returns and manage risk.</p>
-      <a href="#">View Project</a>
-    </div>
-    <div class="project">
-      <h3>Security Analysis Report</h3>
-      <p>Conducted in-depth security analysis on selected equities, evaluating financial statements and market trends to provide investment recommendations.</p>
-      <a href="#">View Project</a>
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <ul>
-      <li>Financial Analysis</li>
-      <li>Portfolio Management</li>
-      <li>Data Analysis</li>
-      <li>Decision Making</li>
-      <li>Security Valuation</li>
-      <li>Microsoft Excel & Power BI</li>
-    </ul>
-  </section>
-
-  <section id="resume" class="section">
-    <h2>Resume</h2>
-    <p>You can download my latest resume here:</p>
-    <a href="assets/NandhaKumar_Resume.pdf" download>Download Resume (PDF)</a>
-  </section>
-
-  <section id="certifications" class="section">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Financial Markets – Yale University (Coursera)</li>
-      <li>Introduction to Data Analytics – IBM (Coursera)</li>
-      <li>Stock Market Investing – NSE Academy</li>
-    </ul>
-  </section>
-
-  <section id="testimonials" class="section">
-    <h2>Testimonials</h2>
-    <div class="testimonial">
-      <p>"Nandha Kumar shows great analytical thinking and finance domain knowledge. He is a quick learner and brings insightful perspectives to every discussion."</p>
-      <p><strong>– Dr. Ramesh Babu, Professor of Finance, TSM</strong></p>
-    </div>
-    <div class="testimonial">
-      <p>"It was a pleasure working with Nandha during our internship. His clarity in financial modeling and enthusiasm were truly admirable."</p>
-      <p><strong>– Priya Rajan, Co-Intern at Equitas Bank</strong></p>
-    </div>
-  </section>
-
-  <section id="blog" class="section">
-    <h2>Blog</h2>
-    <div class="blog-post">
-      <h3><a href="#">How to Build a Balanced Investment Portfolio</a></h3>
-      <p>A beginner-friendly guide on managing risk and returns through proper diversification strategies.</p>
-    </div>
-    <div class="blog-post">
-      <h3><a href="#">Top 5 Tools for Financial Analysis</a></h3>
-      <p>Explore essential tools like Excel, Power BI, and more to level up your financial data analysis game.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: nandhakumar@example.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/nandha-kumar-t-825807213" target="_blank">nandha-kumar-t-825807213</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Nandha Kumar T. All rights reserved.</p>
-  </footer>
-
-  <!-- Modal for image popup -->
-  <div id="modal" onclick="closeModal()">
-    <img id="modal-img" src="" alt="Expanded image" />
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="highlight">
+    I'm an MBA student at TSM, passionate about Finance, Analytics, and HR intersections. Previously completed a BBA at NGM College, exploring entrepreneurship in UG students. I blend analytical rigor with human insight to solve business problems.
   </div>
+  <a class="btn" href="#">Download My Resume</a>
+</section>
 
-  <script>
-    // Open modal on image click
-    const modal = document.getElementById('modal');
-    const modalImg = document.getElementById('modal-img');
-    const galleryItems = document.querySelectorAll('#achievements .gallery-item');
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="project"><strong>Bluechip Portfolio Analysis:</strong> ₹10L virtual investment across top 10 Indian stocks with both technical and fundamental review.</div>
+  <div class="project"><strong>BBA Project:</strong> Entrepreneurship mindset among UG students – a field survey-based project.</div>
+  <div class="project"><strong>Sustainable HRM + AI Article Series:</strong> Explores green recruitment, burnout prediction, and circular HR practices.</div>
+  <div class="project"><strong>Artha Club Event Planning:</strong> Led design, content, debates, and coordination for finance-focused events.</div>
+</section>
 
-    galleryItems.forEach(item => {
-      item.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        modalImg.src = item.src;
-        modalImg.alt = item.alt;
-      });
-    });
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skill">📊 Financial Analysis, Equity & Derivatives, Portfolio Management</div>
+  <div class="skill">🧮 Excel, Tableau, Python (basic), SQL (learning)</div>
+  <div class="skill">🤝 Cross-domain Skills: HR-Finance integration, GDs, Event Leadership</div>
+</section>
 
-    // Close modal when clicking outside image
-    function closeModal() {
-      modal.style.display = 'none';
-      modalImg.src = '';
-      modalImg.alt = '';
-    }
-  </script>
+<section id="experience">
+  <h2 class="section-title">Experience & Internships</h2>
+  <div class="project">💼 <strong>Sakthi Sugars Ltd.:</strong> Finance intern – cost structures and reporting exposure</div>
+  <div class="project">📣 <strong>Admission Cell – TSM:</strong> Tracking leads, blog contributions, and social media planning</div>
+</section>
+
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <div class="project">🎓 MBA – TSM (2024–2026) – Finance, Analytics, HR</div>
+  <div class="project">🎓 BBA – NGM College (2021–2024) – Project on Entrepreneurship</div>
+</section>
+
+<section id="articles">
+  <h2 class="section-title">Articles</h2>
+  <div class="article">📝 <strong>Green Recruitment with AI:</strong> Tech for sustainable hiring</div>
+  <div class="article">📝 <strong>Maslow’s Theory in Finance Learning:</strong> Motivation meets money</div>
+  <div class="article">📝 <strong>Sales Career: Myths vs Reality</strong> – Based on Diageo India guest lecture</div>
+</section>
+
+<section id="certifications">
+  <h2 class="section-title">Achievements & Certifications</h2>
+  <div class="certification">✔ Financial Markets – Yale (Coursera)</div>
+  <div class="certification">✔ Hypothesis Testing – Rice (Coursera)</div>
+  <div class="certification">✔ Understanding Financial Statements – Illinois (Coursera)</div>
+</section>
+
+<section id="gallery">
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery">
+    <img src="poster.png" alt="Debate Poster">
+    <img src="guest.jpg" alt="Guest Lecture">
+    <img src="campus.jpg" alt="Campus Life">
+    <img src="infographic.png" alt="Analytics Infographic">
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Let's Connect</h2>
+  <p>📧 Email: nandhakumart@example.com</p>
+  <p>🔗 LinkedIn: <a href="https://linkedin.com/in/nandha-kumar-t-825807213" target="_blank">nandha-kumar-t</a></p>
+  <p>📁 GitHub: <a href="https://github.com/nandhakumart" target="_blank">@nandhakumart</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Nandha Kumar T | Designed with curiosity and coffee ☕</p>
+</footer>
+
 </body>
 </html>
